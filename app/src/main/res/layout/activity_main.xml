@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前手机品牌：" />
+
+        <TextView
+            android:id="@+id/phoneBrand"
+            android:paddingStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未知手机品牌：" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_phone"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/operationSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="操作步骤: " />
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/operationStepsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="跳转设置"
+        android:onClick="goSeetings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_steps" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
